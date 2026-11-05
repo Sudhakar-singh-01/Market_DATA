@@ -8,7 +8,7 @@ Run from the extracted project root:
 
 The old numeric sidebar/page routing is replaced by nine workspaces: Overview,
 Historical Data, Live Market, Data Explorer, Coverage & Quality, Jobs, Instruments,
-Storage & Recovery, Settings & Diagnostics. Default styling is dark, with an
+Storage & Recovery, Settings & Diagnostics. Default styling is red and white, with an
 explicit role display and one shell-owned logout. Original guarded domain controls
 are reused inside named views. Their previews, confirmations and service checks
 remain authoritative. See `UI_FEATURE_MAP.md` for every old-to-new entry and FNO
@@ -101,3 +101,9 @@ not a native Windows visual acceptance result.
 
 The isolated one-command UI runner also completed: 203 passed, 4 optional skips,
 final PASSED. A final feature-routing/task subset completed 14 passed.
+
+## Red/white live-usage hotfix
+
+See `UI_RED_WHITE_HOTFIX.md` for the CSV widget collision fix, bounded Windows
+sharing-lock handling, current validation and recovery limits for the existing
+failed FNO aggregation. Screenshots now reflect the red-and-white theme.
