@@ -1,3 +1,10 @@
+> **Latest follow-up — 6 November 2026:** read `WINDOWS_SCHEMA_CLI_HOTFIX.md`.
+> Latest package is `7.8_market_data_v4_4_0_schema_cli_hotfix.zip` on the same
+> delivery branch. It supersedes the backend ZIP below. API execution and CASH
+> scoped strict reads now have user-supplied Windows evidence. Two Windows test
+> failures still lack tracebacks; F&O parity and genuine missing CASH audit columns
+> remain pending. No production migration/repair was run by this update.
+
 > **Current continuation update — 6 November 2026:** UI work is paused by the user.
 > Backend logic fixes, regression tests, an isolated validation runner and a storage
 > CLI are now included. Read `BACKEND_LOGIC_REPORT.md`, `BACKEND_CLI_RUNBOOK.md` and

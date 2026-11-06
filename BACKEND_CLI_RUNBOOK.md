@@ -4,6 +4,16 @@ Run from the extracted `Market_DATA` directory in Windows CMD. Use the existing
 Python environment and permanent profile. No UI process is needed. This guide
 describes command effects; it does not run ingestion, repairs, migrations or reset.
 
+**Windows output follow-up:** the API is already responding with HTTP 200 on port
+8000. Reuse that instance while inspecting data; do not start another on the same
+port. After changing API code, stop the old instance with Ctrl+C and restart once
+from the updated code folder. Read `WINDOWS_SCHEMA_CLI_HOTFIX.md` for current fixes
+and unresolved Windows test/storage findings.
+
+The dated examples below use a literal date so they also work in a newly opened
+CMD window. Replace `2026-10-19` with the intended closed trading date. Variables
+set in one CMD are not automatically available in a different CMD window.
+
 ```bat
 set "TIOS_HOME=F:\TIOS_Runtime"
 ```
@@ -114,11 +124,11 @@ prompts for the admin password; do not put passwords into command lines:
 ```bat
 curl.exe --fail-with-body -u admin "http://127.0.0.1:8000/api/v1/instruments?segment=CASH&limit=20"
 curl.exe --fail-with-body -u admin "http://127.0.0.1:8000/api/v1/instruments?segment=FNO&active_only=true&limit=20"
-curl.exe --fail-with-body -u admin "http://127.0.0.1:8000/api/v1/coverage?segment=CASH&symbol=NSE:SBIN-EQ&from=%TRADE_DATE%&to=%TRADE_DATE%"
-curl.exe --fail-with-body -u admin "http://127.0.0.1:8000/api/v1/fno/option-chain?underlying=NIFTY&from=%TRADE_DATE%&to=%TRADE_DATE%&limit=20"
+curl.exe --fail-with-body -u admin "http://127.0.0.1:8000/api/v1/coverage?segment=CASH&symbol=NSE:SBIN-EQ&from=2026-10-19&to=2026-10-19"
+curl.exe --fail-with-body -u admin "http://127.0.0.1:8000/api/v1/fno/option-chain?underlying=NIFTY&from=2026-10-19&to=2026-10-19&limit=20"
 set "MARKET_DATA_API_URL=http://127.0.0.1:8000"
 set "MARKET_DATA_API_USER=admin"
-.venv\Scripts\python.exe -m client --segment CASH --symbol "NSE:SBIN-EQ" --timeframe 1m --from-date %TRADE_DATE% --to-date %TRADE_DATE% --quality verified
+.venv\Scripts\python.exe -m client --segment CASH --symbol "NSE:SBIN-EQ" --timeframe 1m --from-date 2026-10-19 --to-date 2026-10-19 --quality verified
 ```
 
 These requests read existing data only. An empty chain response is not evidence
@@ -130,14 +140,14 @@ permits incomplete coverage; it never turns it into complete coverage.
 One password, bounded CASH checks across every timeframe and pagination:
 
 ```bat
-.venv\Scripts\python.exe -m controller.read_probe_cli --date %TRADE_DATE% --cash-symbol "NSE:SBIN-EQ"
+.venv\Scripts\python.exe -m controller.read_probe_cli --date 2026-10-19 --cash-symbol "NSE:SBIN-EQ"
 ```
 
 To include FNO, set `FNO_SYMBOL` to the exact stored contract symbol from the API
 response, then run:
 
 ```bat
-.venv\Scripts\python.exe -m controller.read_probe_cli --date %TRADE_DATE% --cash-symbol "NSE:SBIN-EQ" --fno-symbol "%FNO_SYMBOL%" --underlying NIFTY
+.venv\Scripts\python.exe -m controller.read_probe_cli --date 2026-10-19 --cash-symbol "NSE:SBIN-EQ" --fno-symbol "%FNO_SYMBOL%" --underlying NIFTY
 ```
 
 Expected: `SCOPED_READ_CHECK_PASS`, or `FINDINGS` with the failing checks. Reports
@@ -152,27 +162,27 @@ do not establish correctness.
 Preview missing CASH data without submitting work:
 
 ```bat
-.venv\Scripts\python.exe -m controller.diagnostics_cli fetch-preview --segment CASH --from %TRADE_DATE% --to %TRADE_DATE% --symbols SBIN
+.venv\Scripts\python.exe -m controller.diagnostics_cli fetch-preview --segment CASH --from 2026-10-19 --to 2026-10-19 --symbols SBIN
 ```
 
 After reviewing the scope, choose ONE CASH fetching path:
 
 ```bat
-.venv\Scripts\python.exe main.py smart-fetch --from %TRADE_DATE% --to %TRADE_DATE% --symbols SBIN --run
+.venv\Scripts\python.exe main.py smart-fetch --from 2026-10-19 --to 2026-10-19 --symbols SBIN --run
 ```
 
 Smart Fetch requests missing closed minutes and stops on storage conflicts. The
 legacy full selected-range path also derives configured timeframes:
 
 ```bat
-.venv\Scripts\python.exe main.py historical --from %TRADE_DATE% --to %TRADE_DATE% --symbols SBIN
+.venv\Scripts\python.exe main.py historical --from 2026-10-19 --to 2026-10-19 --symbols SBIN
 ```
 
 FNO selection uses the configured active universe, ATM/strike window and provider
 entitlements. Review those settings first; this can select multiple contracts:
 
 ```bat
-.venv\Scripts\python.exe main.py fno-historical --underlyings NIFTY --expiries 1 --from %TRADE_DATE% --to %TRADE_DATE%
+.venv\Scripts\python.exe main.py fno-historical --underlyings NIFTY --expiries 1 --from 2026-10-19 --to 2026-10-19
 ```
 
 The command prints its estimate and job ID and runs only that job. `--submit-only`
@@ -185,13 +195,13 @@ provide the stronger completeness checks.
 **6. Aggregation from stored canonical 1m (writes derived data)**
 
 ```bat
-.venv\Scripts\python.exe main.py pipeline-aggregate --from %TRADE_DATE% --to %TRADE_DATE% --symbols SBIN --timeframes 3m 5m 15m 30m 1h 1d --run
+.venv\Scripts\python.exe main.py pipeline-aggregate --from 2026-10-19 --to 2026-10-19 --symbols SBIN --timeframes 3m 5m 15m 30m 1h 1d --run
 ```
 
 For one exact FNO contract, set `FNO_ID` to its actual numeric master ID:
 
 ```bat
-.venv\Scripts\python.exe main.py fno-aggregate --from %TRADE_DATE% --to %TRADE_DATE% --contract-ids %FNO_ID% --timeframes 3m 5m 15m 30m 1h 1d
+.venv\Scripts\python.exe main.py fno-aggregate --from 2026-10-19 --to 2026-10-19 --contract-ids %FNO_ID% --timeframes 3m 5m 15m 30m 1h 1d
 ```
 
 These commands use stored base candles. Complete closed buckets produce bars;
@@ -203,9 +213,9 @@ writers. SQL and Parquet commits remain independent. Inspect `current_write` or
 **7. Detailed quality verification (market data read; job/findings metadata written)**
 
 ```bat
-.venv\Scripts\python.exe main.py verify --from %TRADE_DATE% --to %TRADE_DATE% --symbols SBIN --run
-.venv\Scripts\python.exe main.py fno-verify --from %TRADE_DATE% --to %TRADE_DATE% --contract-ids %FNO_ID%
-.venv\Scripts\python.exe main.py fno-reconcile --from %TRADE_DATE% --to %TRADE_DATE%
+.venv\Scripts\python.exe main.py verify --from 2026-10-19 --to 2026-10-19 --symbols SBIN --run
+.venv\Scripts\python.exe main.py fno-verify --from 2026-10-19 --to 2026-10-19 --contract-ids %FNO_ID%
+.venv\Scripts\python.exe main.py fno-reconcile --from 2026-10-19 --to 2026-10-19
 ```
 
 The first two persist their diagnostic jobs/reports, not candle repairs. Broad
@@ -326,7 +336,7 @@ Master sync changes instrument metadata; FNO may download the master:
 Stored CASH CSV export:
 
 ```bat
-.venv\Scripts\python.exe main.py export --symbol SBIN --timeframe 1m --from %TRADE_DATE% --to %TRADE_DATE% --output cash_1m_export.csv
+.venv\Scripts\python.exe main.py export --symbol SBIN --timeframe 1m --from 2026-10-19 --to 2026-10-19 --output cash_1m_export.csv
 ```
 
 This reads Parquet and writes the requested CSV; use a new filename. For strict
@@ -357,7 +367,7 @@ restoration or data parity. Set `BACKUP_ID` to a returned ID to recheck its arch
 ```bat
 .venv\Scripts\python.exe -m controller.storage_cli backup-verify --id %BACKUP_ID%
 .venv\Scripts\python.exe -m controller.recovery_cli --list-staged
-.venv\Scripts\python.exe -m controller.storage_cli cleanup-preview --segment CASH --symbol "NSE:SBIN-EQ" --from %TRADE_DATE% --to %TRADE_DATE% --timeframe 1m
+.venv\Scripts\python.exe -m controller.storage_cli cleanup-preview --segment CASH --symbol "NSE:SBIN-EQ" --from 2026-10-19 --to 2026-10-19 --timeframe 1m
 ```
 
 Cleanup preview never deletes. Recovery verification requires a separately staged

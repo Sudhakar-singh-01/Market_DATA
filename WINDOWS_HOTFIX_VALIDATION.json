@@ -1,0 +1,54 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "storage",
+      "exit_code": 0,
+      "seconds": 46.766,
+      "counts": {
+        "tests": 381,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 52,
+        "passed": 329
+      },
+      "log": "storage.log",
+      "junit": "storage.xml"
+    },
+    {
+      "group": "operations",
+      "exit_code": 0,
+      "seconds": 5.791,
+      "counts": {
+        "tests": 186,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 43,
+        "passed": 143
+      },
+      "log": "operations.log",
+      "junit": "operations.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 52.938,
+  "focused_tests": {
+    "baseline_passed": 26,
+    "post_fix_passed": 36,
+    "command": "python -m pytest -q tests/test_schema_compatibility.py tests/test_storage_cli.py"
+  },
+  "counts_total": {
+    "passed": 472,
+    "skipped": 95,
+    "failures": 0,
+    "errors": 0
+  },
+  "native_windows_verified": false,
+  "unresolved_windows_failures": [
+    "Jobs: one failed test; traceback not supplied",
+    "Storage: one failed test; traceback not supplied"
+  ]
+}
