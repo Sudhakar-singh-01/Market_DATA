@@ -1,3 +1,29 @@
+> **Current continuation update — 6 November 2026:** UI work is paused by the user.
+> Backend logic fixes, regression tests, an isolated validation runner and a storage
+> CLI are now included. Read `BACKEND_LOGIC_REPORT.md`, `BACKEND_CLI_RUNBOOK.md` and
+> `BACKEND_VALIDATION.json` first. These supersede the artifact/status statements
+> below for this release; earlier sections remain architectural history.
+>
+> Latest full source package:
+> https://github.com/Sudhakar-singh-01/Market_DATA/raw/refs/heads/codex-download-20261030/7.8_market_data_v4_4_0_backend_logic_cli.zip
+>
+> The adjacent `.zip.sha256` file records its checksum. The delivery branch holds
+> artifacts; no application-source merge into `main` is implied. Baseline for this
+> update is the guarded-reset ZIP, SHA-256
+> `247f8dff41d5774fdbe003e3c403e0616a4206159f6af79d54db5b9cd3830262`.
+> Latest per-group evidence: 885 passed and 190 skips (185 MySQL-backed and 5
+> segment-specific) on Linux
+> Python 3.12.14. Native Windows/MySQL/FYERS behavior still needs the bounded checks
+> in the runbook. No production data was reset, ingested or repaired in this work.
+
+> Addition after the red/white handoff: the user requested a reset file.
+> A guarded optional reset utility now exists; see `docs/GUARDED_RESET.md`.
+> Only creation/testing of the utility was performed. No production reset was
+> run. Default `tools/reset_all.cmd` only previews; apply is separately authenticated
+> and explicitly confirmed, creates fresh backups, and archives Parquet before
+> dropping/recreating empty schemas. Do not treat its presence as permission for
+> an agent to reset production or as evidence that reset fixes UI/file-lock bugs.
+
 # TIOS / FYERS Market Data — continuation handoff for Claude
 
 Prepared 5 November 2026 (Asia/Kolkata). This is a continuation guide, not an

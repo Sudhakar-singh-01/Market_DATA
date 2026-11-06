@@ -1,0 +1,370 @@
+{
+  "prepared_date": "2026-11-06",
+  "scope": "provider-free isolated backend tests; UI excluded; MySQL fixtures skipped",
+  "production_verified": false,
+  "native_windows_verified": false,
+  "baseline_zip": "7.8_market_data_v4_4_0_guarded_reset_tool.zip",
+  "baseline_sha256": "247f8dff41d5774fdbe003e3c403e0616a4206159f6af79d54db5b9cd3830262",
+  "runs": {
+    "full": {
+      "status": "PASSED",
+      "platform": "Linux",
+      "python": "3.12.14",
+      "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+      "production_verified": false,
+      "seconds": 64.039,
+      "groups": [
+        {
+          "group": "live",
+          "exit_code": 0,
+          "seconds": 2.335,
+          "counts": {
+            "tests": 78,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 25,
+            "passed": 53
+          }
+        },
+        {
+          "group": "history",
+          "exit_code": 0,
+          "seconds": 2.734,
+          "counts": {
+            "tests": 134,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 29,
+            "passed": 105
+          }
+        },
+        {
+          "group": "aggregation",
+          "exit_code": 0,
+          "seconds": 3.867,
+          "counts": {
+            "tests": 91,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 14,
+            "passed": 77
+          }
+        },
+        {
+          "group": "jobs",
+          "exit_code": 0,
+          "seconds": 11.636,
+          "counts": {
+            "tests": 115,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 27,
+            "passed": 88
+          }
+        },
+        {
+          "group": "api",
+          "exit_code": 0,
+          "seconds": 7.208,
+          "counts": {
+            "tests": 100,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "passed": 100
+          }
+        },
+        {
+          "group": "storage",
+          "exit_code": 0,
+          "seconds": 29.944,
+          "counts": {
+            "tests": 373,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 52,
+            "passed": 321
+          }
+        },
+        {
+          "group": "operations",
+          "exit_code": 0,
+          "seconds": 6.219,
+          "counts": {
+            "tests": 183,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 43,
+            "passed": 140
+          }
+        }
+      ]
+    },
+    "final_affected_groups": {
+      "status": "PASSED",
+      "platform": "Linux",
+      "python": "3.12.14",
+      "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+      "production_verified": false,
+      "seconds": 8.818,
+      "groups": [
+        {
+          "group": "aggregation",
+          "exit_code": 0,
+          "seconds": 4.103,
+          "counts": {
+            "tests": 91,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 14,
+            "passed": 77
+          }
+        },
+        {
+          "group": "operations",
+          "exit_code": 0,
+          "seconds": 4.614,
+          "counts": {
+            "tests": 184,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 43,
+            "passed": 141
+          }
+        }
+      ]
+    }
+  },
+  "latest_per_group": [
+    {
+      "group": "live",
+      "exit_code": 0,
+      "seconds": 2.335,
+      "counts": {
+        "tests": 78,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 25,
+        "passed": 53
+      },
+      "evidence_run": "full"
+    },
+    {
+      "group": "history",
+      "exit_code": 0,
+      "seconds": 2.734,
+      "counts": {
+        "tests": 134,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 29,
+        "passed": 105
+      },
+      "evidence_run": "full"
+    },
+    {
+      "group": "aggregation",
+      "exit_code": 0,
+      "seconds": 4.103,
+      "counts": {
+        "tests": 91,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 14,
+        "passed": 77
+      },
+      "evidence_run": "final_affected_groups"
+    },
+    {
+      "group": "jobs",
+      "exit_code": 0,
+      "seconds": 11.636,
+      "counts": {
+        "tests": 115,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 27,
+        "passed": 88
+      },
+      "evidence_run": "full"
+    },
+    {
+      "group": "api",
+      "exit_code": 0,
+      "seconds": 7.208,
+      "counts": {
+        "tests": 100,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 100
+      },
+      "evidence_run": "full"
+    },
+    {
+      "group": "storage",
+      "exit_code": 0,
+      "seconds": 29.944,
+      "counts": {
+        "tests": 373,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 52,
+        "passed": 321
+      },
+      "evidence_run": "full"
+    },
+    {
+      "group": "operations",
+      "exit_code": 0,
+      "seconds": 4.614,
+      "counts": {
+        "tests": 184,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 43,
+        "passed": 141
+      },
+      "evidence_run": "final_affected_groups"
+    }
+  ],
+  "latest_distinct_total": {
+    "passed": 885,
+    "skipped": 190,
+    "failures": 0,
+    "errors": 0
+  },
+  "cli_help_checks": [
+    {
+      "command": "main.py historical --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py live --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py aggregate --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py export --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py health --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py gapscan --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py schedule --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py sync-instruments --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py smart-fetch --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py pipeline-aggregate --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py verify --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py pipeline-jobs --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py pipeline-worker --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py quality-export --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py fno-historical --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py fno-live --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py fno-aggregate --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py fno-verify --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py fno-jobs --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py fno-reconcile --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py fno-chain-snapshot --help",
+      "exit_code": 0
+    },
+    {
+      "command": "main.py fno-sync-contracts --help",
+      "exit_code": 0
+    },
+    {
+      "command": "-m controller.storage_cli --help",
+      "exit_code": 0
+    },
+    {
+      "command": "-m controller.diagnostics_cli --help",
+      "exit_code": 0
+    },
+    {
+      "command": "-m controller.read_probe_cli --help",
+      "exit_code": 0
+    },
+    {
+      "command": "-m controller.workflow_cli --help",
+      "exit_code": 0
+    },
+    {
+      "command": "-m controller.recovery_cli --help",
+      "exit_code": 0
+    },
+    {
+      "command": "-m tools.market_logic_check --help",
+      "exit_code": 0
+    },
+    {
+      "command": "-m api --help",
+      "exit_code": 0
+    },
+    {
+      "command": "-m client --help",
+      "exit_code": 0
+    }
+  ],
+  "limitations": [
+    "Linux Python 3.12.14 only; native Windows Python 3.13.1 pending",
+    "MySQL integration, real FYERS calls and production data verification were not run",
+    "Totals select the latest result for each distinct group; rerun counts are not added twice",
+    "Partial preliminary or sandbox-interrupted runs are not counted as passes"
+  ],
+  "latest_skip_reasons": {
+    "MySQL-backed fixture excluded before setup": 185,
+    "FNO convention": 4,
+    "Shared manifests are FNO only": 1
+  }
+}
