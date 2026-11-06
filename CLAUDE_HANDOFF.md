@@ -1,3 +1,14 @@
+> **Latest update — 6 November 2026:** package
+> `7.8_market_data_v4_4_0_recovery_windows_reset.zip`; read `RECOVERY_WINDOWS_RESET.md`.
+> CASH repair backup path was 263 characters. A simulated MAX_PATH limit reproduces
+> the same failure; extended Windows operation paths are now used. Native rerun
+> remains pending. Backend failures now print tracebacks in console. Original
+> Jobs failure remains unknown; the user cannot locate the old log. The user has
+> explicitly authorized clearing production SQL/Parquet; only commands are provided
+> here because the cloud cannot access the user's Windows installation. No reset
+> has been run. Preserve backups/archives and do not claim old expired F&O history
+> can necessarily be fetched again.
+
 > **Latest follow-up — 6 November 2026:** read `WINDOWS_SCHEMA_CLI_HOTFIX.md`.
 > Latest package is `7.8_market_data_v4_4_0_schema_cli_hotfix.zip` on the same
 > delivery branch. It supersedes the backend ZIP below. API execution and CASH

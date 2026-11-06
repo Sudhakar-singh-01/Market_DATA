@@ -1,0 +1,67 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "jobs",
+      "exit_code": 0,
+      "seconds": 14.656,
+      "counts": {
+        "tests": 115,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 27,
+        "passed": 88
+      },
+      "log": "jobs.log",
+      "junit": "jobs.xml"
+    },
+    {
+      "group": "storage",
+      "exit_code": 0,
+      "seconds": 34.724,
+      "counts": {
+        "tests": 383,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 52,
+        "passed": 331
+      },
+      "log": "storage.log",
+      "junit": "storage.xml"
+    },
+    {
+      "group": "operations",
+      "exit_code": 0,
+      "seconds": 6.248,
+      "counts": {
+        "tests": 188,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 43,
+        "passed": 145
+      },
+      "log": "operations.log",
+      "junit": "operations.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 55.847,
+  "totals": {
+    "passed": 564,
+    "skipped": 122,
+    "failures": 0,
+    "errors": 0
+  },
+  "additional_evidence": {
+    "baseline_failed_test_on_linux": "1 passed",
+    "simulated_260_character_open_limit_before_fix": "Same coverage CLI test failed at backup target_before.parquet; SQL commit not attempted",
+    "focused_recovery_reset_suite": "100 passed",
+    "windows_path_spelling": "Drive, UNC and idempotent prefixes tested; relative paths rejected",
+    "native_windows_after_fix": "not run",
+    "production_reset": "not executed",
+    "original_windows_jobs_failure": "unknown; log unavailable; Linux Jobs pass is not a fix claim"
+  }
+}
