@@ -1,3 +1,19 @@
+> **Latest — 6 November 2026:** package
+> `7.8_market_data_v4_4_0_data_phase1_inventory.zip`; read `DATA_PHASE1_INVENTORY.md`.
+> The user requested adding pending data features one by one. Item 1 adds bounded
+> read-only counts/date/key inventory to diagnostics_cli, not full OHLCV parity or
+> a new fetch/recovery workflow. UI remains paused. Do not start item 2 automatically.
+> User evidence since the hotfix: Jobs now passes on Windows (89/27 skipped),
+> reset returned EMPTY_SCHEMA_READY with verified retained backups; CASH/FNO
+> recreated schemas compatible, masters synced. SBIN 2026-11-05 fetched 375 base
+> bars and all 6 derived TFs matched. Broad CASH VERIFY is PARTIAL for checkpoint,
+> legacy-job evidence and live telemetry, not candle mismatch. NIFTY history:
+> 43 requests, 15342 stored, 42 verified scopes, 1 NO_DATA (5608,
+> NSE:NIFTY26N0925250PE). Futures ID 10 full verify: 38 PASS. Options 5569/5570:
+> 72 PASS plus 2 blanket option minute-coverage NOT_VERIFIED labels despite 385
+> observed / zero missing each. Date-scoped FNO reconciliation passed. These are
+> bounded observations; do not certify all dates/contracts or post-reset live.
+
 > **Latest update — 6 November 2026:** package
 > `7.8_market_data_v4_4_0_windows_jobs_hotfix.zip`; read `WINDOWS_JOBS_HOTFIX.md`.
 > User's updated Windows output: Storage 322 passed/61 skipped, Operations 144

@@ -1,0 +1,41 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "operations",
+      "exit_code": 0,
+      "seconds": 21.057,
+      "counts": {
+        "tests": 205,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 43,
+        "passed": 162
+      },
+      "log": "operations.log",
+      "junit": "operations.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 21.18,
+  "phase": "Data item 1 only: read-only bounded inventory",
+  "baseline_tests": {
+    "command": "python -m pytest -q tests/test_backend_diagnostics.py tests/test_storage_scope.py",
+    "passed": 23
+  },
+  "final_focused_tests": {
+    "command": "python -m pytest -q tests/test_data_inventory.py tests/test_backend_diagnostics.py tests/test_storage_scope.py",
+    "passed": 40
+  },
+  "native_windows_verified": false,
+  "production_inventory_executed": false,
+  "limitations": [
+    "Counts/timestamp-status keys only; no OHLCV/OI value or checksum certification",
+    "31 closed historical calendar days, 50 targets, 1000 partitions; explicit row bounds",
+    "No atomic cross-store snapshot; incomplete/changed reads report PARTIAL",
+    "Other data-plan items and UI were not started"
+  ]
+}
