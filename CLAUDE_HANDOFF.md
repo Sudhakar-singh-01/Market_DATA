@@ -1,4 +1,17 @@
 > **Latest — 7 November 2026:** package
+> `7.8_market_data_v4_4_0_data_phase3_underlying.zip`; read `DATA_PHASE3_UNDERLYING.md`.
+> User selected data item 3. New underlying CLI resolves configured FNO spot symbols
+> to exact active CASH indices and delegates collection to the existing reviewed
+> CASH workflow. It runs only the submitted job ID. Check is read-only strict
+> regular-session CASH values, with separate FNO SQL timestamp union comparison.
+> Configured 385 FNO vs375 CASH minutes can leave10 unpaired slots; no price carry
+> forward, calendar extension or false full alignment. Native collection pending.
+> Item4/UI not started. Phase2 native audit completed without numeric/timestamp
+> errors: CASH375 rows, FNO15342 rows; all FNO rows had non-null valid OI, current
+> lot65 and tick0.05/0.10 observations. No source/unit proof inferred. Five CASH
+> symbols/indexes still empty and contract5608 NO_DATA until scoped collection.
+
+> **Latest — 7 November 2026:** package
 > `7.8_market_data_v4_4_0_data_phase2_session_units.zip`; read
 > `DATA_PHASE2_SESSION_UNITS.md`. User explicitly selected data item 2. New offline
 > calendar and bounded SQL numeric/unit audit never equates local verified flags,

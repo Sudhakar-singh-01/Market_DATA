@@ -1,0 +1,43 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "jobs",
+      "exit_code": 0,
+      "seconds": 21.475,
+      "counts": {
+        "tests": 134,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 27,
+        "passed": 107
+      },
+      "log": "jobs.log",
+      "junit": "jobs.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 22.556,
+  "phase": "Data item 3 only: reviewed underlying-index collection and scoped strict checks",
+  "baseline_relevant_suite": {
+    "passed": 41
+  },
+  "focused_underlying_workflow_suite": {
+    "passed": 42
+  },
+  "final_focused_underlying_suite": {
+    "passed": 18
+  },
+  "initial_fixture_issue": "Frozen Instrument mutation in a new test fixture; corrected with dataclasses.replace; inactive-index assertion retained",
+  "native_windows_verified": false,
+  "production_fetch_executed": false,
+  "limitations": [
+    "Regular index historical data only; full FNO timestamp alignment reported separately",
+    "Configured 385 FNO vs 375 CASH slots may remain unpaired; no forward fill",
+    "FNO comparison uses SQL timestamp union, not all-contract/value/live quote verification",
+    "No calendar/unit evidence override; phase 4 and UI not started"
+  ]
+}
