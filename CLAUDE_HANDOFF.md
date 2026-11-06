@@ -1,3 +1,20 @@
+> **Latest — 7 November 2026:** package
+> `7.8_market_data_v4_4_0_data_phase2_session_units.zip`; read
+> `DATA_PHASE2_SESSION_UNITS.md`. User explicitly selected data item 2. New offline
+> calendar and bounded SQL numeric/unit audit never equates local verified flags,
+> existing source citations or lot divisibility with independent proof. Existing
+> FAOP75472 timing citation means do NOT assume 385 minutes is wrong. A fresh
+> circular request failed with proxy/HTTP 403; independent confirmation pending.
+> No calendar/data/schema changes or lot/IV rescaling applied. Numeric parser fixes
+> preserve large integer quantities, reject fractional/bool/nonfinite quantities,
+> reject nonfinite optional decimals and boolean historical OI. Native phase-2
+> reports pending. Stop before item 3/UI work unless requested.
+> User's phase-1 Windows inventory completed: CASH only SBIN populated (621 rows),
+> five selected CASH symbols/indexes empty. NIFTY 43 contracts, 15342 base +759
+> derived rows, 37 fully observed grids, 5 sparse puts and 1 NO_DATA. Derived data
+> only on future 10/options5569/5570. No timestamp/status mismatches or read errors;
+> values were not re-certified by inventory.
+
 > **Latest — 6 November 2026:** package
 > `7.8_market_data_v4_4_0_data_phase1_inventory.zip`; read `DATA_PHASE1_INVENTORY.md`.
 > The user requested adding pending data features one by one. Item 1 adds bounded

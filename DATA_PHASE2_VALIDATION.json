@@ -1,0 +1,70 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "history",
+      "exit_code": 0,
+      "seconds": 3.702,
+      "counts": {
+        "tests": 135,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 29,
+        "passed": 106
+      },
+      "log": "history.log",
+      "junit": "history.xml"
+    },
+    {
+      "group": "operations",
+      "exit_code": 0,
+      "seconds": 5.945,
+      "counts": {
+        "tests": 222,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 43,
+        "passed": 179
+      },
+      "log": "operations.log",
+      "junit": "operations.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 9.754,
+  "phase": "Data item 2: session/calendar and unit evidence",
+  "totals": {
+    "passed": 285,
+    "skipped": 72,
+    "failures": 0,
+    "errors": 0
+  },
+  "baseline_tests": {
+    "passed": 26
+  },
+  "final_focused_tests": {
+    "passed": 28
+  },
+  "native_windows_verified": false,
+  "production_data_inspected": false,
+  "source_retrieval": {
+    "url": "https://nsearchives.nseindia.com/content/circulars/FAOP75472.pdf",
+    "retrieved": false,
+    "observed_failure": "curl HTTP/proxy 403; no PDF contents retrieved"
+  },
+  "offline_smoke": {
+    "status": "AUDIT_FINDINGS",
+    "complete": true,
+    "unit_scale_verified": false,
+    "external_evidence_verified": false,
+    "sql_rows_read": 0
+  },
+  "limitations": [
+    "Current calendar flags/citations are not independent verification",
+    "No lot-based scale inference or automatic rescaling",
+    "No data/config/schema/UI rewrite; item 3 not started"
+  ]
+}
