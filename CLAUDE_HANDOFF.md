@@ -1,4 +1,14 @@
 > **Latest update — 6 November 2026:** package
+> `7.8_market_data_v4_4_0_windows_jobs_hotfix.zip`; read `WINDOWS_JOBS_HOTFIX.md`.
+> User's updated Windows output: Storage 322 passed/61 skipped, Operations 144
+> passed/44 skipped; CASH failure no longer occurs. Jobs failed during isolated
+> subprocess startup because its minimal env omitted SYSTEMROOT (WinError 10106).
+> Fix is test-only: allow OS bootstrapping variables, retain stripped app credentials
+> and existing isolation assertions. Native Windows Jobs rerun pending. Reset
+> preview succeeded; apply stopped BEFORE execution because user typed ACCEPT
+> rather than ACCEPT SQL DATA LOSS. Do not claim production was reset.
+
+> **Latest update — 6 November 2026:** package
 > `7.8_market_data_v4_4_0_recovery_windows_reset.zip`; read `RECOVERY_WINDOWS_RESET.md`.
 > CASH repair backup path was 263 characters. A simulated MAX_PATH limit reproduces
 > the same failure; extended Windows operation paths are now used. Native rerun

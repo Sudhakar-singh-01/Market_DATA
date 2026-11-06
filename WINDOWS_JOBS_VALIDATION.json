@@ -1,0 +1,51 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "jobs",
+      "exit_code": 0,
+      "seconds": 13.532,
+      "counts": {
+        "tests": 116,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 27,
+        "passed": 89
+      },
+      "log": "jobs.log",
+      "junit": "jobs.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 13.609,
+  "baseline_cli_file": {
+    "passed": 1,
+    "skipped": 16
+  },
+  "final_focused_checks": {
+    "passed": 2,
+    "deselected": 16
+  },
+  "native_windows_jobs_after_fix_verified": false,
+  "user_windows_evidence_before_this_fix": {
+    "jobs": {
+      "passed": 87,
+      "skipped": 27,
+      "failed": 1
+    },
+    "storage": {
+      "passed": 322,
+      "skipped": 61,
+      "failed": 0
+    },
+    "operations": {
+      "passed": 144,
+      "skipped": 44,
+      "failed": 0
+    }
+  },
+  "production_reset_executed": false
+}
