@@ -1,0 +1,117 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "operations",
+      "exit_code": 0,
+      "seconds": 7.998,
+      "counts": {
+        "tests": 239,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 43,
+        "passed": 196
+      },
+      "log": "operations.log",
+      "junit": "operations.xml"
+    },
+    {
+      "group": "api",
+      "exit_code": 0,
+      "seconds": 6.857,
+      "counts": {
+        "tests": 100,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 100
+      },
+      "log": "api.log",
+      "junit": "api.xml"
+    },
+    {
+      "group": "jobs",
+      "exit_code": 0,
+      "seconds": 12.462,
+      "counts": {
+        "tests": 134,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 27,
+        "passed": 107
+      },
+      "log": "jobs.log",
+      "junit": "jobs.xml"
+    },
+    {
+      "group": "aggregation",
+      "exit_code": 0,
+      "seconds": 3.72,
+      "counts": {
+        "tests": 91,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 14,
+        "passed": 77
+      },
+      "log": "aggregation.log",
+      "junit": "aggregation.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 31.117,
+  "feature": "Offline bounded FNO value/coverage/optional-field audit",
+  "total_passed": 480,
+  "total_skipped": 84,
+  "baseline_relevant_tests": {
+    "passed": 55
+  },
+  "new_focused_tests": {
+    "passed": 17
+  },
+  "initial_sandbox_attempt": {
+    "passed": 29,
+    "failed": 2,
+    "cause": "Existing socket guard tests could not create sockets under sandbox; unchanged assertions passed outside sandbox"
+  },
+  "intermediate_outside_sandbox_regression": {
+    "passed": 102
+  },
+  "production_commands_executed": false,
+  "native_windows_new_command_verified": false,
+  "external_session_evidence_verified": false,
+  "provider_unit_scale_verified": false,
+  "live_verified": false,
+  "user_supplied_evidence": {
+    "date": "2026-11-05",
+    "index_checks_verified": 14,
+    "index_rows": 1242,
+    "both_underlyings_fno_distinct_slots": 385,
+    "both_underlyings_unpaired_slots": 10,
+    "unpaired_interval_IST": "15:30 through 15:39",
+    "note": "Uploaded report consistency reviewed; not a fresh production database read"
+  },
+  "remaining": [
+    "Native read-only FNO value reports for BANKNIFTY and NIFTY",
+    "Official NSE/FYERS source access/content; proxy CONNECT 403 previously observed",
+    "Unit-scale/source confirmation and full-session alignment policy",
+    "Live checks during confirmed open session; UI held"
+  ],
+  "changed_existing_files": [
+    "controller/diagnostics_cli.py",
+    "model/fno/read_verification.py",
+    "tools/market_logic_check.py",
+    "START_HERE.md",
+    "RELEASE_NOTES.md",
+    "docs/CLAUDE_HANDOFF.md"
+  ],
+  "added_files": [
+    "model/fno/value_audit.py",
+    "tests/test_fno_value_audit.py",
+    "docs/DATA_OFFLINE_FNO_VERIFY.md",
+    "docs/DATA_OFFLINE_FNO_VALIDATION.json"
+  ]
+}

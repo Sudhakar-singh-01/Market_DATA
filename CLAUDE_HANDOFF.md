@@ -1,4 +1,15 @@
-> **Latest — 7 November 2026:** package
+> **Latest — 7 November 2026:** `7.8_market_data_v4_4_0_data_offline_fno_verify.zip`;
+> read `DATA_OFFLINE_FNO_VERIFY.md`. User authorized non-live verification and next
+> offline work. New read-only diagnostics `fno-values` checks bounded historical
+> selected values/manifest/coverage/optional availability with opt-in per-run
+> shared-file cache; consumer API requests remain uncached. Native command results
+> are pending. User Windows job11 and fresh report verified both indexes 14/14,
+> 1,242 rows. BANKNIFTY job6 harvested12,277 rows,38 verified scopes,5NO_DATA.
+> Both underlying timestamp unions have385 slots,375 paired,10 extra15:30–15:39.
+> Source/unit evidence still blocked by official-host proxy403; live/UI work held.
+> Do not call items2–3 fully complete or repeat successful index fetching/reset.
+
+> **Earlier — 7 November 2026:** package
 > `7.8_market_data_v4_4_0_data_phase3_underlying.zip`; read `DATA_PHASE3_UNDERLYING.md`.
 > User selected data item 3. New underlying CLI resolves configured FNO spot symbols
 > to exact active CASH indices and delegates collection to the existing reviewed
