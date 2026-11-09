@@ -1,0 +1,74 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "operations",
+      "exit_code": 0,
+      "seconds": 9.959,
+      "counts": {
+        "tests": 262,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 43,
+        "passed": 219
+      },
+      "log": "operations.log",
+      "junit": "operations.xml"
+    },
+    {
+      "group": "jobs",
+      "exit_code": 0,
+      "seconds": 12.572,
+      "counts": {
+        "tests": 134,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 27,
+        "passed": 107
+      },
+      "log": "jobs.log",
+      "junit": "jobs.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 22.605,
+  "feature": "Persistent item2\u20133 report/plan paths and exact missing-path diagnostics",
+  "total_passed": 326,
+  "total_skipped": 70,
+  "baseline_relevant_tests": {
+    "passed": 81
+  },
+  "focused_relevant_tests": {
+    "passed": 91
+  },
+  "new_path_regression_tests": 10,
+  "native_windows_verified": false,
+  "production_provider_requests_executed": false,
+  "source_access_draft": "Previously saved; not applied/published; unchanged by this hotfix",
+  "changed_existing_files": [
+    "RELEASE_NOTES.md",
+    "START_HERE.md",
+    "controller/data23_probe_cli.py",
+    "controller/diagnostics_cli.py",
+    "controller/underlying_cli.py",
+    "docs/CLAUDE_HANDOFF.md",
+    "docs/DATA23_COMPLETION.md",
+    "docs/DATA_PHASE3_UNDERLYING.md",
+    "model/config/runtime_paths.py",
+    "tools/market_logic_check.py"
+  ],
+  "added_files": [
+    "tests/test_report_paths.py",
+    "docs/REPORT_PATH_HOTFIX.md",
+    "docs/REPORT_PATH_VALIDATION.json"
+  ],
+  "limitations": [
+    "Old report files are not automatically copied or overwritten",
+    "Absolute paths and no-profile CWD behavior retained",
+    "Underlying production verification still pending; next step/UI held",
+    "Reported original FileNotFoundError lacked a path, so its exact missing file is not retrospectively established"
+  ]
+}

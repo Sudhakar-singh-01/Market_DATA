@@ -1,4 +1,14 @@
-> **Latest — 9 November 2026:** `7.8_market_data_v4_4_0_data23_recheck.zip`;
+> **Latest — 9 November 2026:** `7.8_market_data_v4_4_0_runtime_report_paths.zip`;
+> read REPORT_PATH_HOTFIX.md. User reported masked FileNotFoundError and requested
+> persistent reports under F:\TIOS_Runtime. Relative item2–3 report/plan paths now
+> use TIOS_HOME; explicit absolute paths and legacy no-profile CWD behavior kept.
+> No silent code-folder fallback or report migration/overwrite; old value reports
+> must be placed under runtime once or passed by explicit absolute path. Probe
+> shows FILE_NOT_FOUND + exact missing_path/stage. Other selected CLIs also show
+> missing paths. Path tests cover stale copies/code upgrades/auth/parent creation.
+> No DB/data/credential/session changes or next step/UI work. Native probe pending.
+
+> **Earlier — 9 November 2026:** `7.8_market_data_v4_4_0_data23_recheck.zip`;
 > read DATA23_COMPLETION.md. User says finish items2–3 before proceeding. New
 > data23_probe_cli rechecks ONLY up to10 report-bound empty scopes, one history
 > call/date each; current exact master identity required, populated/expired scopes
