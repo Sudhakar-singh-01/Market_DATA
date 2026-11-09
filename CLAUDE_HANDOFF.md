@@ -1,4 +1,16 @@
-> **Latest — 7 November 2026:** `7.8_market_data_v4_4_0_data_offline_fno_verify.zip`;
+> **Latest — 9 November 2026:** `7.8_market_data_v4_4_0_data23_recheck.zip`;
+> read DATA23_COMPLETION.md. User says finish items2–3 before proceeding. New
+> data23_probe_cli rechecks ONLY up to10 report-bound empty scopes, one history
+> call/date each; current exact master identity required, populated/expired scopes
+> skipped. No data import, retries, job/checkpoint writes, live socket or full-pass
+> claim. Uploaded value reports confirmed27,619 matching rows,80 nonempty scopes,
+> 6emptyIDs5608/458/468/470/472/476; allOI present, candleIV/Greeks null. Input scope
+> extraction tested against uploads. Native recheck pending. Source-access draft
+> successfully saved for nsearchives.nseindia.com/myapi.fyers.in; requires_publish,
+> NOT applied/published. Prior no-automatic-publish instruction preserved. Official
+> source/session/unit and live proof pending; UI/next step held.
+
+> **Earlier — 7 November 2026:** `7.8_market_data_v4_4_0_data_offline_fno_verify.zip`;
 > read `DATA_OFFLINE_FNO_VERIFY.md`. User authorized non-live verification and next
 > offline work. New read-only diagnostics `fno-values` checks bounded historical
 > selected values/manifest/coverage/optional availability with opt-in per-run

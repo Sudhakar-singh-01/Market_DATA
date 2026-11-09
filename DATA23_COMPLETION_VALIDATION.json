@@ -1,0 +1,97 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "operations",
+      "exit_code": 0,
+      "seconds": 7.856,
+      "counts": {
+        "tests": 251,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 43,
+        "passed": 208
+      },
+      "log": "operations.log",
+      "junit": "operations.xml"
+    },
+    {
+      "group": "history",
+      "exit_code": 0,
+      "seconds": 2.668,
+      "counts": {
+        "tests": 135,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 29,
+        "passed": 106
+      },
+      "log": "history.log",
+      "junit": "history.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 10.624,
+  "feature": "Items 2\u20133 report-bound empty historical scope recheck",
+  "total_passed": 314,
+  "total_skipped": 72,
+  "baseline_relevant_suite": {
+    "passed": 62
+  },
+  "combined_focused_suite": {
+    "passed": 58
+  },
+  "final_new_probe_suite": {
+    "passed": 13,
+    "note": "Includes one extra shared-limiter CLI factory regression added after the isolated group run; overlaps with group tests"
+  },
+  "initial_new_test_findings": {
+    "failed": 5,
+    "cause": "New diagnostic report included YAML date objects; production result fixed to JSON-safe calendar hash/session context without weakening assertions"
+  },
+  "production_provider_requests_executed": false,
+  "native_windows_probe_verified": false,
+  "live_verified": false,
+  "input_report_scope_extraction_verified": true,
+  "selected_known_empty_ids": [
+    5608,
+    458,
+    468,
+    470,
+    472,
+    476
+  ],
+  "source_access_draft": {
+    "status": "SAVED",
+    "requires_publish": true,
+    "applied": false,
+    "published": false,
+    "allowed_domains": [
+      "nsearchives.nseindia.com",
+      "myapi.fyers.in"
+    ]
+  },
+  "items_2_3_fully_verified": false,
+  "remaining": [
+    "Native bounded provider recheck observations",
+    "Official source/session/unit confirmation",
+    "Full session alignment decision and sparse/empty scope interpretation",
+    "Live verification during confirmed session"
+  ],
+  "changed_existing_files": [
+    "tools/market_logic_check.py",
+    "START_HERE.md",
+    "RELEASE_NOTES.md",
+    "docs/CLAUDE_HANDOFF.md"
+  ],
+  "added_files": [
+    "controller/data23_probe.py",
+    "controller/data23_probe_cli.py",
+    "tests/test_data23_probe.py",
+    "docs/DATA23_COMPLETION.md",
+    "docs/DATA23_COMPLETION_VALIDATION.json"
+  ]
+}
