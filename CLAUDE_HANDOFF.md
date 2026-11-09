@@ -1,4 +1,20 @@
-> **Latest — 9 November 2026:** `7.8_market_data_v4_4_0_runtime_report_paths.zip`;
+> **Latest — 9 November 2026:** `7.8_market_data_v4_4_0_data23_session_evidence.zip`;
+> read DATA23_SESSION_SOURCE_REVIEW.md. Actual uploaded FAOP74467 p1/p2 confirms
+> normal FNO09:15–15:40 effective3 August2026; FAOP75472's15:40 table was MOCK.
+> CMTR73362 p4 section6.5 distinguishes actual index and indicative index close
+> during CAS; complete CASH/index timetable and FYERS stream identity not proven.
+> Existing CASH workflow requested only through15:29: absence of stored tail is
+> NOT proof of provider absence. New index_tail_probe_cli requests ONLY historical
+> 15:30–15:39 for2 mapped indexes, noDB/import/hour change, oneSDKcall/index.
+> Native tail observations pending. Session audit source field additive; global
+> units/calendar/source flags not falsely green. Daily-bar close is not exchange
+> official closing-price VWAP (FAOP74467 describes15:10–15:40 window).
+> Six old empty option scopes freshly rechecked by user:6providerNO_DATA. Do not
+> repeat them/reset. Source papers came via upload; direct cloud access still
+> blocked/draft unapplied. Units/live, index mapping/timetable and full alignment
+> unresolved. Next step/UI held.
+
+> **Earlier — 9 November 2026:** `7.8_market_data_v4_4_0_runtime_report_paths.zip`;
 > read REPORT_PATH_HOTFIX.md. User reported masked FileNotFoundError and requested
 > persistent reports under F:\TIOS_Runtime. Relative item2–3 report/plan paths now
 > use TIOS_HOME; explicit absolute paths and legacy no-profile CWD behavior kept.

@@ -1,0 +1,92 @@
+{
+  "status": "PASSED",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "groups": [
+    {
+      "group": "operations",
+      "exit_code": 0,
+      "seconds": 9.715,
+      "counts": {
+        "tests": 280,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 43,
+        "passed": 237
+      },
+      "log": "operations.log",
+      "junit": "operations.xml"
+    },
+    {
+      "group": "jobs",
+      "exit_code": 0,
+      "seconds": 12.925,
+      "counts": {
+        "tests": 134,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 27,
+        "passed": 107
+      },
+      "log": "jobs.log",
+      "junit": "jobs.xml"
+    }
+  ],
+  "scope": "provider-free disposable fixtures; MySQL integrations skipped; UI excluded",
+  "production_verified": false,
+  "seconds": 22.735,
+  "feature": "Reviewed NSE normal-session evidence and bounded historical index tail observation",
+  "total_passed": 344,
+  "total_skipped": 70,
+  "baseline_relevant_suite": {
+    "passed": 52
+  },
+  "focused_relevant_suite": {
+    "passed": 57
+  },
+  "new_index_tail_tests": 16,
+  "new_source_rule_tests": 2,
+  "native_provider_requests_executed": false,
+  "native_windows_probe_verified": false,
+  "reviewed_source_claims": {
+    "FNO_normal_hours": "09:15\u201315:40",
+    "effective_from": "2026-08-03",
+    "reference": "NSE/FAOP/74467 pages1\u20132",
+    "CASH_index_fact": "CMTR73362 section6.5 distinguishes actual index and indicative index close; full bounds/provider mapping not proven"
+  },
+  "sources": [
+    {
+      "reference": "NSE/FAOP/74467",
+      "sha256": "6ff897abbe384e65426b5a53922e6a46690c315a0d80d1e923a09dd82d1b20d3"
+    },
+    {
+      "reference": "NSE/CMTR/73362",
+      "sha256": "c7da4fb3a74954903d9ac2106e16f22679654405774df7abe602f369fd1e8377"
+    }
+  ],
+  "source_retrieval": "Content reviewed from user-supplied PDF uploads; no independent direct agent retrieval or later-amendment search",
+  "items_2_3_fully_verified": false,
+  "changed_existing_files": [
+    "RELEASE_NOTES.md",
+    "START_HERE.md",
+    "docs/CLAUDE_HANDOFF.md",
+    "model/session_unit_audit.py",
+    "tests/test_session_unit_audit.py",
+    "tools/market_logic_check.py"
+  ],
+  "added_files": [
+    "model/exchange_session_evidence.py",
+    "controller/index_tail_probe.py",
+    "controller/index_tail_probe_cli.py",
+    "tests/test_index_tail_probe.py",
+    "docs/DATA23_SESSION_SOURCE_REVIEW.md",
+    "docs/DATA23_SESSION_VALIDATION.json"
+  ],
+  "remaining": [
+    "Actual bounded index-tail observations",
+    "CASH/index timetable and actual/indicative provider mapping",
+    "Volume/OI and applicable optional-field unit evidence",
+    "Empty/sparse history interpretation",
+    "Actual live reception/freshness evidence"
+  ]
+}
